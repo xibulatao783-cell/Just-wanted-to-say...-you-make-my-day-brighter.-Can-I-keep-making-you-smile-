@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para sa Pinaka-Special ✨</title>
+    <style>
+        body {
+            background-color: #ffdeeb; /* Pinkish background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 85%;
+            max-width: 350px;
+        }
+        h1 { color: #d63384; font-size: 22px; margin-bottom: 20px; }
+        img { width: 140px; margin-bottom: 20px; border-radius: 10px; }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            height: 100px;
+            position: relative;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        #yesBtn { background-color: #4CAF50; color: white; transform: scale(1.1); }
+        #noBtn { background-color: #f44336; color: white; position: absolute; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="header">Stressed ka ba today?<br>Puwede ba kitang maging happy pill? 🍬</h1>
+        <img id="chiikawa" src="https://media.tenor.com" alt="Cute Cat">
+        
+        <div class="btn-group">
+            <button id="yesBtn" onclick="showLove()">Yes! 😊</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No ☹️</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            const noBtn = document.getElementById('noBtn');
+            // Random movement para sa CP screen
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 20);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 20);
+            
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        }
+
+        function showLove() {
+            document.getElementById('header').innerHTML = "Yey! I'll do my best to make you smile every day. ❤️✨";
+            document.getElementById('chiikawa').src = "https://media.tenor.com";
+            document.getElementById('noBtn').style.display = 'none';
+            document.getElementById('yesBtn').style.transform = 'scale(1.5)';
+            document.getElementById('yesBtn').innerHTML = "Sending virtual hug! 🤗";
+        }
+    </script>
+
+</body>
+  </html>
+  
