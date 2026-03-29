@@ -6,7 +6,7 @@
     <title>Para sa Pinaka-Special ✨</title>
     <style>
         body {
-            background-color: #ffdeeb; /* Pinkish background */
+            background-color: #ffdeeb; /* Pink na background katulad ng nasa video */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,38 +19,39 @@
             text-align: center;
             background: white;
             padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             width: 85%;
             max-width: 350px;
         }
-        h1 { color: #d63384; font-size: 22px; margin-bottom: 20px; }
-        img { width: 140px; margin-bottom: 20px; border-radius: 10px; }
+        h1 { color: #d63384; font-size: 20px; line-height: 1.4; margin-bottom: 20px; }
+        img { width: 140px; margin-bottom: 20px; }
         .btn-group {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 15px;
-            height: 100px;
+            height: 80px;
             position: relative;
         }
         button {
             padding: 12px 25px;
             font-size: 18px;
             border: none;
-            border-radius: 12px;
+            border-radius: 15px;
             cursor: pointer;
             font-weight: bold;
             transition: 0.3s;
         }
-        #yesBtn { background-color: #4CAF50; color: white; transform: scale(1.1); }
+        #yesBtn { background-color: #4CAF50; color: white; }
         #noBtn { background-color: #f44336; color: white; position: absolute; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 id="header">Stressed ka ba today?<br>Puwede ba kitang maging happy pill? 🍬</h1>
+        <!-- ITO YUNG MESSAGE NA GUSTO MO -->
+        <h1 id="header">Just wanted to say... you make my day brighter. Can I keep making you smile? ✨</h1>
         <img id="chiikawa" src="https://media.tenor.com" alt="Cute Cat">
         
         <div class="btn-group">
@@ -62,9 +63,9 @@
     <script>
         function moveButton() {
             const noBtn = document.getElementById('noBtn');
-            // Random movement para sa CP screen
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 20);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 20);
+            // Pinapagalaw ang "No" button sa random na lugar sa screen
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 50);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 50);
             
             noBtn.style.position = 'fixed';
             noBtn.style.left = x + 'px';
@@ -72,14 +73,14 @@
         }
 
         function showLove() {
-            document.getElementById('header').innerHTML = "Yey! I'll do my best to make you smile every day. ❤️✨";
+            // Ang lalabas kapag pinindot ang "Yes"
+            document.getElementById('header').innerHTML = "I promise to always try my best to make you happy. ❤️✨";
             document.getElementById('chiikawa').src = "https://media.tenor.com";
             document.getElementById('noBtn').style.display = 'none';
-            document.getElementById('yesBtn').style.transform = 'scale(1.5)';
-            document.getElementById('yesBtn').innerHTML = "Sending virtual hug! 🤗";
+            document.getElementById('yesBtn').style.transform = 'scale(1.4)';
+            document.getElementById('yesBtn').innerHTML = "See you soon! 🥰";
         }
     </script>
 
 </body>
-  </html>
-  
+</html>
